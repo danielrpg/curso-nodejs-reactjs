@@ -1,0 +1,18 @@
+{
+  "name": "fibonacci",
+  "version": "1.0.0",
+  "description": "secuencia de fibonacci",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "",
+    "minify": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "express": "^4.17.1"
+  }
+}
