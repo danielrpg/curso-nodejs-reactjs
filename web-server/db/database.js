@@ -1,4 +1,4 @@
-const user = [
+const users = [
   {
     id: 1,
     name: "Daniel",
@@ -17,22 +17,31 @@ const user = [
   },
 ];
 
-const post = [
+const posts = [
   {
     id: 1,
     userId: 1,
-    title: "Daniel",
-    description: "daniel@gmail.com",
-    state: true,
+    title: "Hello World",
+    description: "lorem ipsum",
     comments: [],
   },
   {
-    id: 1,
+    id: 2,
     userId: 2,
-    title: "Daniel",
-    description: "daniel@gmail.com",
+    title: "Hello World",
+    description: "lorem ipsum",
     comments: [],
   },
+  {
+    id: 3,
+    userId: 1,
+    title: "Hello World",
+    description: "lorem ipsum",
+    comments: [],
+  }
 ];
 
-module.exports = {};
+module.exports = {
+  users,
+  posts
+};

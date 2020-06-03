@@ -1,4 +1,4 @@
-const { v4 } = require("uuid");
+const { v4: uuidv4 } = require("uuid");
 const { users } = require("../db/database");
 
 const getUsers = () => {
@@ -9,7 +9,7 @@ const getUser = (userId) => {
   return users.find((user) => user.id == userId);
 };
 
-const createUser = (name, email, password, tole) => {
+const createUser = (name, email, password, role) => {
   let user = {
     id: uuidv4(),
     name,
@@ -24,7 +24,7 @@ const createUser = (name, email, password, tole) => {
 };
 
 const updateUser = (id, name, email, password, role, state = true) => {
-  let userIndex = users.findeIndex((user) => user.id === id);
+  let userIndex = users.findIndex((user) => user.id === id);
   if (!userIndex <= -1) {
     return null;
   }
@@ -39,7 +39,7 @@ const updateUser = (id, name, email, password, role, state = true) => {
 };
 
 const deleteUser = (id) => {
-  let userIndex = users.findeIndex((user) => user.id === id);
+  let userIndex = users.findIndex((user) => user.id === id);
   if (userIndex < 0) {
     return null;
   }
