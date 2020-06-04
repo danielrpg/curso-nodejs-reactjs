@@ -55,6 +55,7 @@ app.post("/posts/", (req, res) => {
 });
 
 //put update post
+// /posts/:postId/comment/:commentId
 app.put('/posts/:postId', (req, res) =>{
   let postId = req.params.postId;
   let body = req.body;

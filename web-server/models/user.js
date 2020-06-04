@@ -9,7 +9,7 @@ const getUser = (userId) => {
   return users.find((user) => user.id == userId);
 };
 
-const createUser = (name, email, password, role) => {
+const createUser = ({name, email, password, role}) => {
   let user = {
     id: uuidv4(),
     name,
@@ -47,10 +47,15 @@ const deleteUser = (id) => {
   return users.splice(userIndex, 1);
 };
 
+const findUser = email => {
+  return users.find(user => user.email == email);
+}
+
 module.exports = {
   getUsers,
   getUser,
   createUser,
   updateUser,
   deleteUser,
+  findUser,
 };

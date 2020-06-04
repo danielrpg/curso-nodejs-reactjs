@@ -6,4 +6,6 @@ app.use(require("./users"));
 
 app.use(require("./posts"));
 
+app.use(require("./login"));
+
 module.exports = app;
